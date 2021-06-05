@@ -1,2 +1,1 @@
-# self-protfolio
-all my projects in one place
+https://github.com/EtielYakira/self-protfolio/blob/main/public/index.html
