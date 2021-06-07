@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Bmi from './Components/BMI/index'
 import Students from './Components/Students/Students'
+import Chuck from "./Components/Chuck/Chuck";
 
 function RouterCall() {
     return( 
@@ -23,6 +24,7 @@ function RouterCall() {
       <Nav.Link><Link to="/Quotes">Quotes</Link></Nav.Link>
       <Nav.Link><Link to="/Students">Students</Link></Nav.Link>
       <Nav.Link><Link to="/Bmi">Bmi</Link></Nav.Link>
+      <Nav.Link><Link to="/Chuck">Chuck</Link></Nav.Link>
     </Nav>
           </Navbar>
         
@@ -40,6 +42,9 @@ function RouterCall() {
           </Route>
           <Route path="/Bmi">
             <Bmi />
+          </Route>
+          <Route path="/Chuck">
+            <Chuck />
           </Route>
           <Route path="/home">
             <Home />

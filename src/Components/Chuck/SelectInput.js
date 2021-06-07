@@ -1,10 +1,10 @@
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import ErrorMessages from "./ErrorMessages";
-import { IoMdSchool } from "react-icons/io";
 
-function SelectInput({ validateInput, data ,name, options}) {
-  <Form.Group className="col mr-5">
+function SelectInput({categoryList, name, onChoosingCategory}) {
+    return <>
+    <h1>SelectInput</h1>
+    <Form.Group className="col mr-5">
     <Form.Label className="text-white">
       <u>Choose</u>
     </Form.Label>
@@ -13,12 +13,17 @@ function SelectInput({ validateInput, data ,name, options}) {
         as="select"
         name={name}
         defaultValue=""
+        onChange={onChoosingCategory}
       >
         <option>Choose {name}</option>
-        {options.map((optionName) => (
+        {categoryList.map((optionName) => (
           <option>{optionName}</option>
         ))}
       </Form.Control>
     </InputGroup>
   </Form.Group>;
+    </>
 }
+
+
+export default SelectInput
