@@ -1,7 +1,7 @@
 {
   "short_name": "React App",
   "name": "Create React App Sample",
-  "homepage": "https://etielyakira.github.io/self-protfolio.github.io/",
+  "homepage": "https://etielyakira.github.io/",
   "scripts": {
 		"start": "react-scripts start",
 		"predeploy": "npm run build",
