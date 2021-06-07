@@ -5,7 +5,7 @@ import {ImSearch} from 'react-icons/im'
 
 function SearchBox({onChangeSearchWord}) {
     return <>
-    <h1>SearchBox</h1>
+    <div className='col-3'>
     <InputGroup className="mb-3">
     <InputGroup.Prepend>
       <InputGroup.Text id="basic-addon1">
@@ -19,6 +19,7 @@ function SearchBox({onChangeSearchWord}) {
       onChange={onChangeSearchWord}
     />
   </InputGroup>
+  </div>
     </>
 }
 

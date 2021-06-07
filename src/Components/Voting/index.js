@@ -44,11 +44,9 @@ function Voting() {
       
     
     return<>
-            <h1 className='mx-auto text center'>Voting App</h1>
+            <h1 className='mx-auto text-center mainTitle'>Voting App</h1>
 
-        <Row className='bg-dark text-center mb-lg-4'>
-            <Col className="text-white">Your Favorite Hero</Col>
-            </Row>
+            <h4 className="text-white text-center"> Choose Your Favorite Hero</h4>
         <Container>
             <Row>
             {items.sort((a ,b) => a.votes - b.votes).reverse().map((item, index) => {

@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import StudentForm from "../StudentForm/StudentForm";
+import getRandomInt from "../../../Functions/Random/random";
 
 export default function StudentsList({
   students,
@@ -30,7 +31,7 @@ export default function StudentsList({
       </h1>
       <div className="container">
         <div className="row justify-content-center mt-4">
-          <ol className=" m-3 col-3">
+          <ol className=" m-3 col-3 list-group list-group-numbered">
             <div>
               <Button
                 variant="secondary"
@@ -97,34 +98,52 @@ export default function StudentsList({
           {studentToShow === -1 ? (
             ""
           ) : (
-            <Card
-              className="m-5 col-9 align-self-start"
-              style={{ maxHeight: "75vh", maxWidth: "75vh" }}
-            >
-              <Card.Body className="d-block">
-                <Card.Title
-                  className="text-center font-weight-bold font-italic"
-                  style={{ fontSize: "5vh" }}
-                >
-                  {students[studentToShow].username}
-                </Card.Title>
-                <div className="border-black  border-top border-bottom">
-                  <strong>Email:&nbsp;</strong> {students[studentToShow].email}
-                </div>
-                <div className="border-black  border-top border-bottom">
-                  <strong>Course:&nbsp;</strong>{" "}
-                  {students[studentToShow].course}
-                </div>
-                <div className="border-black  border-top border-bottom">
-                  <strong>Address:&nbsp;</strong>{" "}
-                  {students[studentToShow].address}
-                </div>
-                <div className="border-black  border-top border-bottom">
-                  <strong>Gender:&nbsp;</strong>{" "}
-                  {students[studentToShow].gender}{" "}
-                </div>
-              </Card.Body>
-            </Card>
+            // <Card
+            //   className="m-5 col-9 align-self-start"
+            //   style={{ maxHeight: "75vh", maxWidth: "75vh" }}
+            // >
+            //   <Card.Body className="d-block">
+            //     <Card.Title
+            //       className="text-center font-weight-bold font-italic"
+            //       style={{ fontSize: "5vh" }}
+            //     >
+            //       {students[studentToShow].username}
+            //     </Card.Title>
+                
+
+<div class="st m-5 col-4 align-self-start">
+  <div class="avatar-flip">
+    <img className='student' src={`https://randomuser.me/api/portraits/${students[studentToShow].gender === 'Male'? 'men':'women'}/${getRandomInt(99,10)}.jpg`} height="150" width="150"></img>
+    <img className='student' src="https://raw.githubusercontent.com/laudep/code-gif-generator/master/docs/img/generating.gif" height="150" width="150"></img>
+  </div>
+  <h1 className='student'>{students[studentToShow].username}</h1>
+  <div className='d-flex flex-column text-left'>
+  <p className='student'><strong>Course:&nbsp;</strong>{" "}{students[studentToShow].course}</p>
+  <p className='student'><strong>address:&nbsp;</strong>{" "}{students[studentToShow].address}</p>
+  <p className='student'><strong>gender:&nbsp;</strong>{" "}{students[studentToShow].gender}</p>
+  <p className='student'><strong>email:&nbsp;</strong>{" "}{students[studentToShow].email}</p>
+  </div>
+</div>
+
+
+
+            //     <div className="border-black  border-top border-bottom">
+            //       <strong>Email:&nbsp;</strong> {students[studentToShow].email}
+            //     </div>
+            //     <div className="border-black  border-top border-bottom">
+            //       <strong>Course:&nbsp;</strong>{" "}
+            //       {students[studentToShow].course}
+            //     </div>
+            //     <div className="border-black  border-top border-bottom">
+            //       <strong>Address:&nbsp;</strong>{" "}
+            //       {students[studentToShow].address}
+            //     </div>
+            //     <div className="border-black  border-top border-bottom">
+            //       <strong>Gender:&nbsp;</strong>{" "}
+            //       {students[studentToShow].gender}{" "}
+            //     </div>
+            //   </Card.Body>
+            // </Card>
           )}
         </div>
       </div>

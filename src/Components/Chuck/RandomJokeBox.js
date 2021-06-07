@@ -14,8 +14,10 @@ function RandomJokeBox(params) {
 
    
     return <>
-    <h1>RandomJokeBox</h1>
+    <div className='container'>
+    <h2 className='text-warning'>RandomJokeBox</h2>
     <p>{randomJoke}</p>
+    </div>
     </>
 }
 

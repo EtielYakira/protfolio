@@ -1,5 +1,5 @@
 
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {HashRouter as Router, Switch, Route, Link} from "react-router-dom";
 import Home from './Components/Home/index'
 import Quote from './Components/Quote/index'
 import Voting from './Components/Voting/index'
@@ -12,14 +12,14 @@ import Chuck from "./Components/Chuck/Chuck";
 function RouterCall() {
     return( 
     <>
-        <Router>
+        <Router basename='/protfolio'>
 
         
             
         <Navbar id="navbar"> 
-        <Navbar.Brand className='text-white'><Link to="/home" className='text-white text-decoration-none'>My Projects</Link></Navbar.Brand>
+        <Navbar.Brand className='text-white'><Link to="/" className='text-white text-decoration-none'>My Projects</Link></Navbar.Brand>
         <Nav className="mr-auto">
-      <Nav.Link ><Link to="/home">Home</Link></Nav.Link>
+      <Nav.Link ><Link to="/">Home</Link></Nav.Link>
       <Nav.Link ><Link to="/Voting">Voting</Link></Nav.Link>
       <Nav.Link><Link to="/Quotes">Quotes</Link></Nav.Link>
       <Nav.Link><Link to="/Students">Students</Link></Nav.Link>
@@ -45,9 +45,6 @@ function RouterCall() {
           </Route>
           <Route path="/Chuck">
             <Chuck />
-          </Route>
-          <Route path="/home">
-            <Home />
           </Route>
           <Route path="/">
             <Home />

@@ -22,19 +22,14 @@ function Quote() {
     }
     
     return <>
-    <h1 className='text-center'>Students Center</h1>
+    <h1 className='text-center mainTitle'>Students Center</h1>
+    <div className='d-flex justify-content-center align-items-center flex-column my-4'>
 
-        <Row>
-            <Col md={4} className="mx-auto my-5">
         <QuoteCard currImg={currQuoteAndColor.currImg}  currQuote={currQuoteAndColor.currQuote}/>
-            </Col>
-        </Row>
-        <Row>
-            <Button className="mx-auto" onClick={() => onChangeQuote()} >
+            <Button className="mx-auto my-4" onClick={() => onChangeQuote()} >
                 Change Quote
             </Button>
-        </Row>
-
+            </div>
     </>
 }
 

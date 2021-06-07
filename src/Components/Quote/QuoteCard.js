@@ -7,7 +7,7 @@ function QuoteCard({currQuote, currImg}) {
     
     
     return (
-<Card>
+<Card className='w-25'>
   <Card.Header>Quote</Card.Header>
   <Card.Body style={{backgroundColor:`${currImg}`}}>
     <blockquote className="blockquote mb-0">

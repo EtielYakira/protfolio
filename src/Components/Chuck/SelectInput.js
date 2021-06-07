@@ -3,11 +3,10 @@ import InputGroup from "react-bootstrap/InputGroup";
 
 function SelectInput({categoryList, name, onChoosingCategory}) {
     return <>
-    <h1>SelectInput</h1>
-    <Form.Group className="col mr-5">
-    <Form.Label className="text-white">
-      <u>Choose</u>
-    </Form.Label>
+    <div className='container'>
+    <h2>Joke Category</h2>
+    <div className=''>
+    <Form.Group className="col m-5">
     <InputGroup>
       <Form.Control
         as="select"
@@ -22,6 +21,8 @@ function SelectInput({categoryList, name, onChoosingCategory}) {
       </Form.Control>
     </InputGroup>
   </Form.Group>;
+  </div>
+  </div>
     </>
 }
 

@@ -4,9 +4,8 @@ import Highlighter from "react-highlight-words";
 function DataInCategorySelectedToShow({dataToShow, searchWord}) {
 
     return <>
-    <h1>DataInCategorySelectedToShow</h1>
-    <InputGroup>
-    <div className="overflow-auto m-5" style={{width:'150vh',height:'70vh'}}>
+    <InputGroup className="col">
+    <div className="overflow-auto m-5 border border-5 bg-white" style={{width:'100vh',height:'50vh'}}>
         <ul>
             {searchWord ?
             dataToShow

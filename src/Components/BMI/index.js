@@ -22,10 +22,12 @@ function Bmi() {
     }
 
     return <>
-    <h1 className='mx-auto'>Your BMI</h1>
-
+    <h1 className='mx-auto text-center mainTitle' style={{fontSize:'100px'}} >Your BMI</h1>
+    <div className='d-flex container'>
     <BmiCalculator onParameters={onParameters}  parameters={parameters} isOkToShow={isOkToShow}/>
+
     {okToShow && <ResultBmi parameters={parameters}/>}
+    </div>
     </>
 }
 

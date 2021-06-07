@@ -3,12 +3,12 @@ import Button from 'react-bootstrap/Button'
 
 function BmiCalculator({onParameters, parameters, isOkToShow}) {
     return <>
-    <Form className="container my-4">
+    <Form className="container my-4 col-4">
  {(Object.keys(parameters)).map(parameter =>
 
     (<Form.Group>
-       <Form.Label>{parameter}</Form.Label>
-       <Form.Control onBlur={e => onParameters(e.target.name, e.target.value)} name={parameter} type="number" placeholder={`Enter ${parameter}`} />
+       <Form.Label style={{fontSize:'43px'}}>{parameter}</Form.Label>
+       <Form.Control className='' onBlur={e => onParameters(e.target.name, e.target.value)} name={parameter} type="number" placeholder={`Enter ${parameter}`} />
      </Form.Group>)
  )}
 
